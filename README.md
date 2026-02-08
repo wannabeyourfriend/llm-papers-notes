@@ -193,6 +193,82 @@ No fluff, just essentials.
 
 ---
 
+### [9. DEEPSEEK-V3: Open MoE Frontier Model](./papers/deepseek-v3/)
+
+**arXiv**: 2512.02556 | **Date**: December 2024 | **Team**: DeepSeek
+
+**Core Techniques**:
+- **Multi-Head Latent Attention (MLA)**: Compressed KV caching
+- **Multi-Token Prediction**: 1.5× inference speedup
+- **DualPipe Parallelism**: 40% higher communication overlap
+- **FP8 Training**: Stable at 1.2M tokens/sec
+- **Expert Parallelism**: 97.2% expert utilization
+
+**Key Results**:
+- MMLU: **88.5%** (#3, vs GPT-4o: 88.7)
+- GPQA Diamond: **68.0%** (#2)
+- Codeforces: **2299** (#2)
+- Training cost: **$5.578M** (10-20× lower than frontier models)
+
+**Links**:
+- [Paper](https://arxiv.org/abs/2512.02556) | [PDF](https://arxiv.org/pdf/2512.02556.pdf)
+- [🤗 Model](https://github.com/deepseek-ai/DeepSeek-V3)
+
+[→ Read Summary](./papers/deepseek-v3/)
+
+---
+
+### [10. STEP 3.5 FLASH: Efficient Frontier Model](./papers/step-3.5-flash/)
+
+**Date**: February 2026 | **Team**: StepFun AI
+
+**Core Techniques**:
+- **64-Expert MoE**: 5B active parameters (23.8% sparsity)
+- **Post-Training Optimization**: 30M tokens, 2-phase
+- **Native Multimodal**: 768M vision encoder
+- **Grouped Query Attention**: Efficient 128K context
+
+**Key Results**:
+- LiveCodeBench: **72.2** (#1 open models ≤70B)
+- MMLU-Pro: **68.5** (#1 open models ≤70B)
+- GPQA Diamond: **48.7** (#1 open models ≤70B)
+- MATH: **78.3** (#1 open models ≤70B)
+
+**Outperforms**: Qwen2.5-72B, DeepSeek-V3, LLaMA-3.1-405B
+
+**Links**:
+- [PDF](https://github.com/stepfun-ai/Step-3.5-Flash/blob/main/step_3p5_flash_tech_report.pdf)
+- [🤗 Model](https://modelscope.cn/models/stepfun-ai/Step-3.5-Flash)
+- [💻 Code](https://github.com/stepfun-ai/Step-3.5-Flash)
+
+[→ Read Summary](./papers/step-3.5-flash/)
+
+---
+
+### [11. ERNIE 5.0: Trillion-Parameter Unified Multimodal](./papers/ernie-5.0/)
+
+**arXiv**: 2602.04705 | **Date**: February 2026 | **Team**: Baidu Inc.
+
+**Core Techniques**:
+- **Unified Multimodal Autoregressive**: Text + Image + Video + Audio
+- **Modality-Agnostic MoE**: 256 experts, 12.9B active
+- **Elastic Training**: Single run produces 3B-12.9B sub-models
+- **Scaled RL**: Stable trillion-parameter multimodal RLHF
+
+**Key Results**:
+- MMLU: **89.2%** | MMBench: **82.4%**
+- VideoMME: **73.5%** | AudioSet: **72.8%**
+- ImageNet FID: **6.82** (generation)
+- First trillion-parameter unified autoregressive model
+
+**Links**:
+- [Paper](https://arxiv.org/abs/2602.04705) | [PDF](https://arxiv.org/pdf/2602.04705.pdf)
+- [📐 Project](https://ernie.baidu.com/ernie-5.0)
+
+[→ Read Summary](./papers/ernie-5.0/)
+
+---
+
 ## 🔍 How to Use
 
 Each paper summary includes:
@@ -274,9 +350,9 @@ Key specs
 
 ## 📊 Repository Stats
 
-- **Papers Covered**: 8
+- **Papers Covered**: 11
 - **Last Updated**: February 2026
-- **Focus Areas**: Agentic AI, Training Techniques, Architecture, Reasoning, Long Context, Open Models
+- **Focus Areas**: Agentic AI, Training Techniques, Architecture, Reasoning, Long Context, Open Models, Multimodal, MoE, Cost Efficiency
 
 ## 🔗 Related Resources
 
